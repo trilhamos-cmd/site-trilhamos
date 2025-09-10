@@ -1,0 +1,16 @@
+---
+import produtos from '../data/produtos.json';
+---
+
+<section class="vitrine">
+  <h2>Produtos Recomendados</h2>
+  <div class="grade-produtos">
+    {produtos.map((item) => (
+  <div class="produto">
+    <img src={item.imagem} alt={item.nome} />
+    <h3>{item.nome}</h3>
+    <p>{item.descricao}</p>
+    <a href={item.link} target="_blank" class="botao">Ver Produto</a>
+  </div>
+))}
+</section>

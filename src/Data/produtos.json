@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Mochila Aventura 45L",
+    "descricao": "Ideal para trilhas longas, resistente à água.",
+    "imagem": "/imagens/produtos/mochila-aventura.jpg",
+    "link": "https://seulinkdeafiliado.com/mochila-aventura"
+  },
+  {
+    "nome": "Bota Impermeável",
+    "descricao": "Perfeita para terrenos irregulares e clima úmido.",
+    "imagem": "/imagens/produtos/bota-trilha.jpg",
+    "link": "https://seulinkdeafiliado.com/bota-trilha"
+  },
+  {
+    "nome": "Barraca Compacta 2P",
+    "descricao": "Leve, resistente e fácil de montar — ideal para acampamentos rápidos.",
+    "imagem": "/imagens/produtos/barraca-compacta.jpg",
+    "link": "https://seulinkdeafiliado.com/barraca-compacta"
+  }
+]

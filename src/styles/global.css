@@ -1,0 +1,705 @@
+/* Variáveis */
+:root {
+  --cor-primaria: #ffcc00;
+  --cor-secundaria: #000000;
+  --cor-fundo: #ffffff;
+  --cor-texto: #000000;
+  --cor-hover: #e6b800;
+  --cor-destaque: #007f5f;
+  --cor-destaque-hover: #005f47;
+}
+
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: var(--cor-texto);
+}
+
+/* Scroll suave para links âncora */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- */
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.cabecalho a {
+  color: var(--cor-fundo);
+  text-decoration: none;
+}
+
+.cabecalho .fa-envelope {
+  font-size: 1.5rem;
+  color: var(--cor-fundo);
+}
+
+.logo img {
+  height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.titulo-site {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin: 0;
+}
+
+/* --- */
+
+/* Hero */
+.hero {
+  background-image: url('/imagens/Trilhamos.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--cor-fundo);
+  padding: 4rem 2rem;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.botao-junte-se {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: auto;
+  max-width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid var(--cor-primaria);
+}
+
+.botao-junte-se:hover {
+  background-color: var(--cor-hover);
+  border-color: var(--cor-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* --- */
+
+/* Botões padrão */
+button,
+.botao {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+.botao:hover {
+  background-color: var(--cor-hover);
+}
+
+/* Botão secundário para o CTA Clube */
+.botao.secundario {
+  background-color: transparent;
+  color: var(--cor-fundo);
+  border: 2px solid var(--cor-fundo);
+}
+
+.botao.secundario:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-secundaria);
+}
+
+/* --- */
+
+/* Formulários */
+input, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.formulario {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--cor-fundo);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --- */
+
+/* Seções */
+.sobre {
+  padding: 4rem 2rem;
+  background-color: #f0f0f0;
+}
+
+.sobre-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.texto ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.texto li {
+  margin-bottom: 0.5rem;
+}
+
+.texto strong {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* --- */
+
+/* Imagens */
+.imagem {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* --- */
+
+/* Grade de produtos */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grade-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === CTA Clube === */
+.cta-clube {
+  background: url('/imagens/bg-aventura.png') center/cover no-repeat;
+  color: var(--cor-fundo);
+  padding: 15rem 2rem; /* aumentei altura */
+  text-align: center;
+  position: relative;
+}
+
+.cta-conteudo {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* filtro leve apenas atrás do texto/botões */
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+}
+
+.cta-conteudo h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.cta-conteudo p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+}
+
+.cta-botoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-botoes .botao {
+  min-width: 250px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Botão primário (Telegram) */
+.cta-botoes .botao {
+  background: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  border: 2px solid var(--cor-primaria);
+}
+
+.cta-botoes .botao:hover {
+  background: var(--cor-hover);
+  border-color: var(--cor-hover);
+}
+
+/* Botão secundário (Strava) */
+.cta-botoes .botao.secundario {
+  background: transparent;
+  color: var(--cor-fundo);
+  border: 2px solid var(--cor-fundo);
+}
+
+.cta-botoes .botao.secundario:hover {
+  background: var(--cor-fundo);
+  color: var(--cor-secundaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cta-conteudo h2 {
+    font-size: 2rem;
+  }
+
+  .cta-conteudo p {
+    font-size: 1rem;
+  }
+
+  .cta-botoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-botoes .botao {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Seção Vitrine */
+.vitrine {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.vitrine h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--cor-secundaria);
+}
+
+/* Grid de produtos */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card de produto */
+.produto {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem do produto */
+.produto img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.produto h3 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+  color: var(--cor-destaque);
+}
+
+.produto p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Botão dentro do card */
+.produto .botao {
+  margin-top: auto; /* botão gruda embaixo */
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grade-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grade-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Seção Dicas de Trilhas */
+.dicas-trilhas {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.dicas-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titulo-dicas {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--cor-secundaria);
+}
+
+/* Grid com duas colunas */
+.dicas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card de cada dica */
+.dica {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagem com proporção 3:2 */
+.dica img {
+  width: 100%;
+  aspect-ratio: 3 / 2;   /* mantém a proporção 3:2 */
+  height: auto;
+  max-height: 600px;     /* altura máxima em telas grandes */
+  object-fit: cover;     /* corta um pouco se precisar, mas preenche */
+  display: block;
+}
+
+/* Conteúdo do card */
+.dica .texto {
+  padding: 1.8rem;
+  text-align: justify;
+}
+
+.dica h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--cor-destaque);
+}
+
+.dica p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .dica img {
+    max-height: 450px; /* um pouco menor em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .dicas-grid {
+    grid-template-columns: 1fr; /* apenas uma coluna */
+  }
+
+  .dica img {
+    max-height: 300px; /* reduz altura em telas pequenas */
+  }
+}
+
+
+/* CTA Email */
+.cta-email {
+  background-color: #f0f0f0;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-container {
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--cor-fundo);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cta-titulo {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.formulario-email {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.linha-campos {
+  display: flex;
+  gap: 1rem;
+}
+
+.linha-campos input {
+  flex: 1;
+}
+
+.formulario-email input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.formulario-email button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario-email button:hover {
+  background-color: var(--cor-hover);
+}
+
+.beneficios p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.beneficios li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.beneficios li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--cor-destaque);
+  font-weight: bold;
+}
+
+/* --- */
+
+/* Instagram Feed */
+.instagram-feed {
+  padding: 4rem 2rem;
+  background-color: var(--cor-fundo);
+  text-align: center;
+}
+
+.titulo-instagram {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--cor-secundaria);
+}
+
+/* --- */
+
+/* Footer */
+.footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+}
+
+.footer-nav,
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: var(--cor-primaria);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* --- */
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .linha-campos {
+    flex-direction: column;
+  }
+  
+  .cta-titulo {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .cta-botoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-botoes .botao {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
